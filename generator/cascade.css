@@ -20,16 +20,25 @@ a {
 }
 
 form {
-  padding: 30px;
-  background-color: cadetblue;
-  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-  border-radius: 10px;
   display: flex;
+}
+
+small {
+  color: darkolivegreen;
+  line-height: 3;
+  opacity: 0.6;
+}
+
+.wrapper {
+  background-color: cadetblue;
   margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+  padding: 15px 20px;
 }
 
 .poem-container {
-  margin: 120px auto;
+  margin: 40px auto;
   max-width: 600px;
 }
 
@@ -51,21 +60,34 @@ form {
   width: 150px;
   font-size: 16px;
   border-radius: 50px;
-  padding: 14px 24px;
+  padding: 16px;
 }
 
 .poem {
   font-size: 16px;
   background-color: cadetblue;
   padding: 20px;
-  line-height: 2.5;
+  line-height: 2;
   border-left: 3px solid darkgreen;
   box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
   border-radius: 10px;
 }
 
+.hide {
+  display: none;
+}
+
 .poem em {
   color: darkgreen;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
 }
 
 footer {
